@@ -17,7 +17,7 @@
   <body>
     
      <!--Nav Bar -->
-      <nav class="nav fixed justify-content-center  bg-light p-5">
+      <nav class="nav fixed-top justify-content-center bg-light p-2">
           <ul class="nav justify-content-center">
               <li class="nav-item">
                 <a class="nav-link active" href="#">Home</a>
@@ -36,17 +36,18 @@
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#headerModal">
     Prepare to Launch
    </button>
+   
   <div class="modal" tabindex="-1" role="dialog" id="headerModal">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+            <h5 class="modal-title">Greetings fellow sky traveller!</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+            <p>Welcome to the free open space in where anything goes!</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -56,9 +57,6 @@
       </div>
     </div>
         </nav>
-
-
-
 
       <main class="container">
           <div class="row">
@@ -91,7 +89,7 @@
 
                             <div class="card-body">
                                     <h1 class="card-title text-muted">The Great Open Space</h1>
-                                   <p class="card-text">Don't you just love the color of the sky? . . . MEOW.</p>
+                                   <p class="card-text"></p>
                             </div> 
                 </div>
           </div>
@@ -102,60 +100,64 @@
                 <li class="media">
                   <img class="mr-3" src="images/img5.jpg" alt="Generic placeholder image">
                   <div class="media-body">
-                    <h5 class="mt-0 mb-1">The Sky</h5>
+                    <h3 class="mt-0 mb-1">The Sky</h3>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                   </div>
                 </li>
                 <li class="media my-4">
                   <img class="mr-3" src="images/img4.jpg" alt="Generic placeholder image">
                   <div class="media-body">
-                    <h5 class="mt-0 mb-1">This Sky</h5>
+                    <h3 class="mt-0 mb-1">This Sky</h3>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                   </div>
                 </li>
                 <li class="media">
                   <img class="mr-3" src="images/img6.jpg" alt="Generic placeholder image">
                   <div class="media-body">
-                    <h5 class="mt-0 mb-1">This Guy</h5>
+                    <h3 class="mt-0 mb-1">This Guy</h3>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                   </div>
                 </li>
               </ul>
+
+              <!--Bottom Modal-->
+              <div class="center">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Let your voice be heard...</button>
+                  
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Send a message to the Universe</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-group">
+                              <label for="recipient-name" class="col-form-label">Your Name:</label>
+                              <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label">Message:</label>
+                              <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
       </main>
 
       <hr>
 
-<div></div>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
-    </div>
-  </div>
-</div>
 
         
 
@@ -171,7 +173,7 @@
             show:false,
             backdrop:false
           });
-          console.log($('#exampleModal'));
+          console.log($('#headerModal'));
         });
       </script>
 
@@ -181,7 +183,7 @@
         show:false,
         backdrop:false
       });
-      console.log($('#navModal'));
+      console.log($('#enavModal'));
     });
   </script>
 
