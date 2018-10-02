@@ -1,0 +1,30 @@
+/* Everything RE: fonts and type */
+@import url("typography.css");
+
+/* Everything RE: layout and  */
+@import url("layout.css");
+
+
+/* NAV */
+
+.nav-link{
+    color: black;
+}
+
+.custom-nav-link{
+    color: grey;
+}
+
+.custom-nav-link:active, .custom-nav-link:hover, .custom-nav-link.active{
+    border-radius: 13px;
+    color:white ;
+    background-color:#4db8ff ; 
+}
+
+/* Jumbotron */
+.jumbotron{
+    background:#ffbb33;
+}
+
+
+/* CAROUSEL */
