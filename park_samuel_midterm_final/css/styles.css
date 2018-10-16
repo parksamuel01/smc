@@ -1,0 +1,93 @@
+
+
+/*Header font*/
+h1{
+    font-family: "arcon-round";
+}
+
+img {
+    max-width:100%;
+}
+
+body {
+    font-family: Verdana;
+
+}
+/*Navigation */
+.navbar-brand {
+    font-family: "arcon-round";
+}
+nav {
+    background-color:#586c7a;
+}
+
+.nav-space-splash{
+    height: 300px;
+}
+
+.nav-space {
+    height:56px;
+}
+
+/*Jumbotron*/
+.jumbotron{
+    background-color:transparent;
+    padding-top: 100px;
+}
+
+.splash-page {
+    height: 100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-image: url(../images/splash-mobile.jpg);
+}
+
+.about-jumbo{    
+    height:30vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/about-jumbo.jpg);
+}
+
+.featured-models-jumbo{
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/featured-models-jumbo.jpg);
+}
+
+.team-jumbo{
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/team-jumbo.jpg);
+}
+
+.description-space{
+    line-height:30px;
+}
+
+/*FONTS*/
+@font-face {
+    font-family:"arcon-round";
+                src: url('../fonts/Arcon-Rounded-Regular.otf')
+}
+
+
+@media (min-width: 768px) { 
+    .splash-page {
+        background-image:url(../images/splash-desktop.jpg)
+    }
+}
+
+@media (min-width: 768px){
+    .lgr-txt{
+        font-size: 40pt;
+    }
+    
+    .text-xl{
+        font-size: 80pt;
+    }
+}
+
