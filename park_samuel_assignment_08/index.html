@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Assignment 8</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+
+  <link rel="stylesheet" href="styles/stylesheet.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark ">
+        <a class="navbar-brand" href="#">bestdogs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+
+            <!--Drop Menu-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+
+          <!--Search Bar-->
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+
+        </div>
+      </nav>
+      
+      <!--Jumbotron-->
+  <div class="jumbotron jumbotron-fluid dog-jumbo">
+      <div class="row mt-6">
+          <div class="col-md-6"></div>
+          <div class="col-12 text-center text-light">
+        <h1 class="display-5">Who is the best dog?</h1>
+        <p class="lead">Vote here on who are the best kind of dogs!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-4 text-center">
+        <div class="card-body">
+
+            <h1 class="text-center">Choose your Dog</h1>
+            <form action="auto-select.php">
+
+              <fieldset>
+                <label for="size">Size</label>  
+                <select class="form-control" id="size" name="size">
+                  <option value="big">Big</option>
+                  <option value="medium">Medium</option>
+                  <option value="small" selected="selected" >Small</option>
+                </select>
+              </fieldset>
+          
+              <fieldset>
+                <label for="dog">Choose your dog</label>
+                <select class="form-control" id="dog" name="dog" disabled>
+                </select>
+              </fieldset>
+              <br>
+          
+              
+              <fieldset>
+                <input type="submit" value="Submit your Dog">
+              </fieldset>
+          
+            </form>
+
+        </div>
+    </div>
+  
+
+  <script>
+    $(document).ready( function(){
+      var bigDog = ["German Shepard", "Golden Retriever", "Labrador", "Great Dane"];
+      var mediumDog = ["Border Collie", "Siberian Husky", "Beagle","Australian Sheperd","Dalmation","Builldog"];
+      var smallDog = ["Chihuaha", "Yorkshire Terrier", "Pomerianian", "Pug", "Class-S", "Class-G"];
+      
+      var updateModel = function(){
+        console.log($('#size').val());
+        $('#dog').removeAttr('disabled');
+        $('#dog').html('');
+        
+        if($('#size').val() === 'big'){
+          for(var i = 0; i < bigDog.length; i++){
+            console.log( bigDog[i]);
+            var htmlContent = '<option value="' + bigDog[i] + '">' + bigDog[i] + "</option>";
+            $('#dog').append(htmlContent);
+          }
+        }
+        if($('#size').val() === 'medium'){
+          for(var i = 0; i < mediumDog.length; i++){
+            console.log(mediumDog[i]);
+            var htmlContent = '<option value="' + mediumDog[i] + '">' + mediumDog[i] + "</option>";
+            $('#dog').append(htmlContent);
+          }
+        }
+        if($('#size').val() === 'small'){
+          for(var i = 0; i < smallDog.length; i++){
+            console.log(smallDog[i]);
+            var htmlContent = '<option value="' + smallDog[i] + '">' + smallDog[i] + "</option>";
+            $('#dog').append(htmlContent);
+          }
+        }
+      }
+
+      $('#size').change(function(){
+        updateModel();
+      });
+    } );
+  </script>
+  
+</body>
+</html>

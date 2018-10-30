@@ -1,0 +1,41 @@
+/* Everything RE: fonts and type */
+@import url("typography.css");
+
+/* Everything RE: layout and  */
+@import url("layout.css");
+
+
+/* NAV */
+
+.navbar-brand{
+    color:white;
+}
+
+.nav-link{
+    color: white;
+}
+
+.custom-nav-link{
+    color: grey;
+}
+
+.custom-nav-link:active, .custom-nav-link:hover, .custom-nav-link.active{
+    border-radius: 13px;
+    color:white ;
+    background-color:#4db8ff ; 
+}
+
+/* Jumbotron */
+.jumbotron{
+    background-color:transparent;
+}
+
+.dog-jumbo{
+    height:63vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/dog.jpg);
+}
+
+
+/* CAROUSEL */
