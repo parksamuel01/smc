@@ -1,0 +1,13 @@
+
+
+.image-title-prg{
+    display:block;
+}
+
+
+@media (min-width: 768px){
+    .image-title-prg{
+        height:200px;
+        display:table-cell;
+    }
+}
