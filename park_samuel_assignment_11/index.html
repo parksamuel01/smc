@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Assignment 11</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body style="background-color:black">
+
+    <canvas id="pic-1" width="720" height="480" style="background-color:rgb(204, 0, 0)">
+        Get a new browser to see this!
+    </canvas>
+    <canvas id="pic-2" width="720" height="480" style="background-color:rgb(0, 128, 255)">
+        Get a new browser to see this!
+    </canvas>
+    <canvas id="pic-3" width="720" height="480" style="background-color:rgb(153, 230, 0)">
+        Get a new browser to see this!
+    </canvas>
+    <canvas id="pic-4" width="720" height="480" style="background-color:rgb(255, 255, 102)">
+        Get a new browser to see this!
+    </canvas>
+
+    
+
+    <script>
+    function initialize(){
+        window.requestAnimationFrame(draw);
+    }
+    
+    function draw() {
+
+        var canvas = document.getElementById("pic-1");
+        var context  = canvas.getContext("2d");
+
+        context.fillStyle = "rgb(255, 255, 255)";
+        context.fillRect(30, 80, 150, 300);
+        
+        context.fillStyle = "rgb(204, 0, 0)";
+        context.fillRect(100, 200, 100, 300);
+
+        context.fillStyle = "rgb(255, 255, 255)";
+        context.fillRect(210, 80, 150, 300);
+
+        context.fillStyle = "rgb(204, 0, 0)";
+        context.fillRect(255, 115, 60, 200);
+
+
+        var canvas = document.getElementById("pic-2");
+        var context  = canvas.getContext("2d");
+
+        context.fillStyle = "rgb(0, 0, 125)";
+        context.fillRect(30, 30, 200, 300);
+        
+        context.fillStyle = "rgb(125, 0, 0)";
+        context.fillRect(120, 120, 300, 150);
+
+        context.fillStyle = "rgb(0, 0, 125)";
+        context.fillRect(300, 150, 300, 150);
+
+        context.fillStyle = "rgb(0, 0, 125)";
+        context.fillRect(300, 150, 300, 150);
+
+        context.fillStyle = "rgb(0, 0, 0)";
+        context.fillRect(400, 0, 50, 200);
+
+        var canvas = document.getElementById("pic-3");
+        var context  = canvas.getContext("2d");
+
+        context.fillStyle = "rgb(0, 0, 125)";
+        context.fillRect(30, 30, 200, 300);
+        
+        context.fillStyle = "rgb(125, 0, 0)";
+        context.fillRect(120, 120, 300, 150);
+
+        context.fillStyle = "rgb(0, 0, 125)";
+        context.fillRect(300, 150, 300, 150);
+
+        context.fillStyle = "rgb(0, 0, 125)";
+        context.fillRect(300, 150, 300, 150);
+
+        context.fillStyle = "rgb(0, 0, 0)";
+        context.fillRect(400, 0, 50, 200);
+
+        var canvas = document.getElementById("pic-4");
+        var context  = canvas.getContext("2d");
+
+        context.fillStyle = "rgb(0, 0, 125)";
+        context.fillRect(30, 30, 200, 300);
+        
+        context.fillStyle = "rgb(125, 0, 0)";
+        context.fillRect(120, 120, 300, 150);
+
+        context.fillStyle = "rgb(0, 0, 125)";
+        context.fillRect(300, 150, 300, 150);
+
+        context.fillStyle = "rgb(0, 0, 125)";
+        context.fillRect(300, 150, 300, 150);
+
+        context.fillStyle = "rgb(0, 0, 0)";
+        context.fillRect(400, 0, 50, 200);
+
+
+
+        context.clearRect(canvas.width, canvas.height, 40, 40);
+        window.requestAnimationFrame(draw);
+
+    }
+    initialize();
+    
+    </script>
+    
+</body>
+</html>
