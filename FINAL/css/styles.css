@@ -1,0 +1,194 @@
+/*colors
+yellow: #f4ad0f
+*/
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.container {
+    background-color:white;
+}
+
+/*Header font*/
+h1{
+    font-family: "bungee";
+}
+h2{margin-top:50px;
+    font-size: 30px;
+    font-family: "bungee";
+}
+p {
+    font-family:"arcon";
+}
+
+img {
+    max-width:100%;
+}
+
+body {
+    background-color:#f4ad0f;
+
+}
+/*Navigation*/
+
+.nav-link{
+    font-size: 24px;
+    font-family:"arcon";
+    color: black;
+}
+
+.nav-link:hover{
+  color:#f4ad0f;
+  
+}
+
+a:hover, a:active{
+  color:#f4ad0f;
+}
+
+
+#mainNav.navbar{
+    min-height:100px;
+}
+
+.navbar .container-fluid{
+    background-color:white;
+    border-bottom: .5px solid #eeeeee;
+    max-height:70px;
+}
+    
+.navbar-logo{
+    padding: 23px 22px;
+}
+
+.navbar-logo img{
+        height:70px;
+        max-width:100%;
+}
+
+.collapse.navbar-collapse{
+    text-align:center;
+  }
+
+.navbar-default .nav > li:hover span, .navbar-default .nav > li a.active span{
+	opacity:0.35;
+}
+
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover {
+  color:#9c9c9c;
+}
+
+.navbar-default.affix .nav>li>a:focus:hover, .navbar-default.affix .nav>li>a:hover{
+  color:#9c9c9c;
+}
+
+
+
+  .btn{
+    background-color:#eb511c;
+    padding: 6px 140px;
+    border-radius: 5px;
+    font-family: 'open sans condensed';
+    color: white;
+    font-weight:700;
+  }
+  
+  .btn:hover, .btn:focus{
+    color:white;
+    background-color:#bb4922;
+  }
+
+  .home-section{
+      margin-top: 300px;
+  }
+
+  /*Cart from codyhouse*/
+  #cd-cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+
+  /* header height */
+  padding-top: 50px;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  transition: right 0.3s;
+  }
+
+  #cd-cart.speed-in {
+  right: 0;
+  }
+
+  /*Home Page*/
+  .home-images a{
+	display:block;
+}
+
+.home-images .text{
+  position:absolute;
+  width:260px;
+  padding:30px;
+}
+
+.home-images .text h2{
+  font-size:22px;
+}
+
+.home-images .text p{
+  font-size:14px;
+}
+
+.home-images img{
+  width:100%;
+  height:auto;
+}
+/*Home Page End*/
+  
+/*Product Page*/
+.product-image {
+    
+}
+/*Product Page End*/
+
+/*About Page*/
+/*About Page End*/
+
+/*Support Page*/
+/*Support Page End*/
+
+/*Blog Page*/
+/*Blog Page End*/
+
+/*FONTS*/
+@font-face {
+    font-family:"bungee";
+                src: url('../fonts/bungee-Regular.otf')
+}
+@font-face {
+    font-family:"arcon";
+                src: url('../fonts/Arcon-Rounded-Regular.otf')
+}
+
+
+@media (min-width: 768px) { 
+    .splash-page {
+        background-image:url(../images/splash-desktop.jpg)
+    }
+}
+
+@media (min-width: 768px){
+    .lgr-txt{
+        font-size: 40pt;
+    }
+    
+    .text-xl{
+        font-size: 80pt;
+    }
+}
+
