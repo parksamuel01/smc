@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--My Styles-->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <title>Dynastar Gaming</title>
+
+  </head>
+
+
+
+  <body>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-12">
+
+                <!--Navigation-->
+                  <nav id="mainNav" class="navbar navbar-expand-md fixed-top px-4">
+                    <a class="navbar-brand" href="../index.html">DG</a>
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <!--Navigation Links-->
+                              <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/products.html">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link active" href="../pages/contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link " href="../pages/blog.html">Blog</a>
+                                </li>
+                              </ul>
+                            </div>  
+                  </nav>
+                  <!--Navigation End-->
+
+                  <!--Contact Form-->
+                  <div class="row">
+                      <div class="col-1 col-md-3"></div>
+                      <div class="col-10 col-md-6 mt-4 px-4 pb-4 pt-3 contact-form">
+                        <form>
+                        <h1>Contact</h1>
+                        <p class="mt-3">You can reach out to the Dynastar team if you have any feedback or concerns about our products.</p>
+                        <hr>
+
+                          <div class="form-group col-8">
+                              <label for="firstname" class="arcon">First Name</label>
+                              <input type="text" class="form-control my-2" id="full-name" placeholder="First name (required)">
+                          </div>
+                          <div class="form-group col-8">
+                              <label for="lastname"class="arcon">Last Name*</label>
+                              <input type="text" class="form-control my-2" id="last-name" placeholder="Last name (optional)">
+                          </div>
+                          <div class="form-group col-12">
+                              <label for="email" class="arcon">Email address</label>
+                              <input type="email" class="form-control my-2" id="email" placeholder="Your email (required)">
+                          </div>
+                          <div class="form-group col-12">
+                              <label for="textarea" class="arcon">Message</label>
+                              <textarea class="form-control" id="text-area" placeholder="Write your message here" rows="3"></textarea>
+                          </div>
+                          <button type="submit" class="btn cd-add-to-cart btn-secondary text-light call-button my-3" id="submit-btn" disabled>Send Message</button>
+                      </form>
+                    </div>  
+                  </div>
+                  </div>
+                  <!--Contact Form End-->
+                  
+
+                </div>
+            </div>
+        </div>
+            
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+    <script>
+        $(document).ready(function(){
+            document.getElementById("full-name").focus();
+
+            $('.form-control').blur(function(){
+
+                var alertMessage = '<p class="alert m-0 text-danger">This field is required.</p>';
+
+                console.log('blurred element')
+
+                $(this).parent().find('.alert').remove();
+                $(this).css('border-color', '#ced4da');
+
+                if( $(this).val().length === 0 ) {
+                    console.log('not valid')
+                    $(this).parent().append(alertMessage);
+                    $(this).css('border-color', 'red');
+                }
+
+                if( $('#first-name' && '#textarea' && '#email').val().length > 0){
+                    $('#submit-btn').removeAttr('disabled');
+                };
+            });
+        });
+    </script>
+  
+  </body>
+</html>
+
+
